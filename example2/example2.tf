@@ -23,3 +23,4 @@ resource "aws_security_group" "instance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+vpc_security_group_ids = ["${aws_security_group.instance.id}"]
